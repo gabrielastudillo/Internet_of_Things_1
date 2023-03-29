@@ -14,5 +14,5 @@ while (blinks < 10): #let's do this 10 times
    time.sleep(1)
    blinks=blinks + 1
    print('blinking...')
-GPIO.cleanup()
+GPIO.cleanup() /close the door when you leave
 print('done')
