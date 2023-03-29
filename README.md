@@ -1,2 +1,2 @@
-# Internet_of_Things_1
-420-420-LE Internet of Things 1
+# Internet of Things 1
+Content related to the course 420-420-LE Internet of Things 1 at Champlain College Lennnoxville
