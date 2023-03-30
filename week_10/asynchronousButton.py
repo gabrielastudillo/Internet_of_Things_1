@@ -14,12 +14,14 @@ GPIO.setup(BUTTON2, GPIO.IN, pull_up_down = GPIO.PUD_UP) #default UP
 def backdoor(channel):
     GPIO.output(LED, GPIO.HIGH)   #LED ON
     print ("Back door")
+    print('Edge detected on channel %s'%channel)
     time.sleep(0.1) #on just for a few
     GPIO.output(LED, GPIO.LOW) # LED OFF
 
 def frontdoor(channel):
     GPIO.output(LED, GPIO.HIGH)   #LED ON
     print ("Front door")
+    print('Edge detected on channel %s'%channel)
     time.sleep(0.1) #ON just for a few
     GPIO.output(LED, GPIO.LOW) # LED OFF    
     
