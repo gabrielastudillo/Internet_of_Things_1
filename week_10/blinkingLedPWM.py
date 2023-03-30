@@ -12,4 +12,5 @@ try:
 except KeyboardInterrupt:
   blink.stop()
 finally:
+  print('Bye')
   GPIO.cleanup()
