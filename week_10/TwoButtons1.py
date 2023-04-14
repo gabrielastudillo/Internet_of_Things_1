@@ -25,3 +25,4 @@ try:
 except KeyboardInterrupt:
   GPIO.cleanup()
 print("End of the test")
+#test1
