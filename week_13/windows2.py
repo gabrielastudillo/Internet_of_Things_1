@@ -4,7 +4,7 @@ from tkinter import *
 class Application(Frame):
     def __init__(self,master):
         super(Application,self).__init__(master)
-        self.pack()
+        self.grid()
         
 root = Tk()
 root.title('This is a test window')
