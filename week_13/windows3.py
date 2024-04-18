@@ -6,7 +6,7 @@ class Application(Frame):
         self.create_widgets()
     def create_widgets(self):
         self.label1 = Label(self, text="Welcome to my Window")
-        self.lael1.grid(row=0, column=0, sticky=W)
+        self.label1.grid(row=0, column=0, sticky=W)
 
 root = Tk()
 root.title("This is a test window")
