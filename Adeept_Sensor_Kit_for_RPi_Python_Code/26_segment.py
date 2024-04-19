@@ -58,17 +58,17 @@ def numberDisplay_dec(num):
 
 	pro = int(num * 100)
 
-	integer = int(pro / 100)
+	integer = int(pro // 100)
 	decimal = int(pro % 100)
 
 	sendCommand(0x40)
 	GPIO.output(STB, False)
 	_shiftOut(DIO, CLK, LSBFIRST, 0xc0)
-	_shiftOut(DIO, CLK, LSBFIRST, digits[integer/10])
+	_shiftOut(DIO, CLK, LSBFIRST, digits[integer//10])
 	_shiftOut(DIO, CLK, LSBFIRST, 0x00)
 	_shiftOut(DIO, CLK, LSBFIRST, digits[integer%10] | 0x80)
 	_shiftOut(DIO, CLK, LSBFIRST, 0x00)
-	_shiftOut(DIO, CLK, LSBFIRST, digits[decimal/10])
+	_shiftOut(DIO, CLK, LSBFIRST, digits[decimal//10])
 	_shiftOut(DIO, CLK, LSBFIRST, 0x00)
 	_shiftOut(DIO, CLK, LSBFIRST, digits[decimal%10])
 	_shiftOut(DIO, CLK, LSBFIRST, 0x00)
