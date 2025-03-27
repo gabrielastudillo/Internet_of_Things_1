@@ -4,7 +4,7 @@ import random
 import paho.mqtt.client as mqtt
 
 red = LED(17)
-id = '67e6ce98-537b-414e-871f-f0cbc009ee63'
+id = '67e6ce98-537b-414e-871f-f0cbc009ee63' # change it with your unique ID
 client_name = id + 'temperature_client'
 
 mqtt_client = mqtt.Client(client_name)
@@ -15,7 +15,7 @@ mqtt_client.loop_start()
 print("MQTT connected!")
 
 while True:
-    temperature = random.randrange(23,27)
+    temperature = random.randrange(23,27) #change this so it reads temperature from the sensor
     print('Light level:', temperature)
 
     if temperature > 24:
