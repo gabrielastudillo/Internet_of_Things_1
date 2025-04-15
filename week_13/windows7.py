@@ -19,15 +19,23 @@ class Application(Frame):
     def create_widgets(self):
         self.REDbutton = Button(self, text="Red LED", bg="red", command=self.toggle_red_led)
         self.REDbutton.grid(row=0, column=0, padx=10, pady=10)
+        self.REDlabel = Label(self, text="Turned OFF", fg="red")
+        self.REDlabel.grid(row=0, column=1, sticky=E)
 
         self.YELLOWbutton = Button(self, text="Yellow LED", bg="yellow", command=self.toggle_yellow_led)
-        self.YELLOWbutton.grid(row=0, column=1, padx=10, pady=10)
+        self.YELLOWbutton.grid(row=1, column=0, padx=10, pady=10)
 
     def toggle_red_led(self):
         if self.red_led_state:
             self.red_led.off()
+            self.REDlabel.config(text="Turned OFF", fg="red")
+            print("RED LED --- OFF")
+            print("_______________")
         else:
             self.red_led.on()
+            self.REDlabel.config(text="Turned ON", fg="green")
+            print("RED LED --- ON")
+            print("_______________")
         self.red_led_state = not self.red_led_state
 
     def toggle_yellow_led(self):
