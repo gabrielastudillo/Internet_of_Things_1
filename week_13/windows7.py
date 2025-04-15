@@ -7,8 +7,8 @@ class Application(Frame):
         self.grid()
 
         # Initialize LEDs using gpiozero
-        self.red_led = LED(21)
-        self.yellow_led = LED(20)
+        self.red_led = LED(17)
+        self.yellow_led = LED(18)
 
         # Internal state tracking
         self.red_led_state = False
