@@ -29,7 +29,8 @@ def read_temp():
     device_folder = "/sys/bus/w1/devices/"  # Keep as string, used with os.listdir
 
     # TODO 2: List all entries in device_folder and filter those starting with '28-'
-    # Hint: [name for name in os.listdir(device_folder) if name.startswith("28-")]
+    # Hint: use a for loop to read the names of all the directories inside the device_folder,
+    # if the directory starts with 28- append it to a list of devices
     # If none found, return None.
     # devs = ...
     # if not devs:
